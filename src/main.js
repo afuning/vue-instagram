@@ -3,6 +3,9 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+// 添加全剧样式
+require('./assets/style/index.css');
+//
 
 Vue.config.productionTip = false;
 
