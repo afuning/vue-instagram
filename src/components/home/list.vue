@@ -1,15 +1,13 @@
 <template>
-  <div class="home-container">
-    <topbar></topbar>
-    <div class="thread-list">
-      <list></list>
+  <div class="thread-list">
+    <div class="">
+      <thread-cpt></thread-cpt>
     </div>
   </div>
 </template>
 
 <script>
-import Topbar from '@/baseCpt/Topbar';
-import List from './list';
+import ThreadCpt from './cpt/ThreadCpt';
 
 export default {
   data() {
@@ -18,11 +16,11 @@ export default {
     };
   },
   components: {
-    Topbar,
-    List,
+    ThreadCpt,
   },
 };
 </script>
 
 <style scoped>
+
 </style>
