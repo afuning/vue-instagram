@@ -15,6 +15,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
     };
   },
+  created() {
+    this.$store.dispatch('getListAction');
+  },
   components: {
     ThreadCpt,
   },

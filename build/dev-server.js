@@ -10,6 +10,7 @@ var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')  // 代理
+var router = require('./router');
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
@@ -80,6 +81,8 @@ devMiddleware.waitUntilValid(() => {
   }
   _resolve()
 })
+// 添加路由
+app.use('/', router);
 
 var server = app.listen(port)
 

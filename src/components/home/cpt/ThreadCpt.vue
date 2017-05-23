@@ -3,6 +3,7 @@
     <div class="thread-item">
       <div class="thread-header">
         <div class="thread-header-avator">
+          <img />
         </div>
       </div>
     </div>
