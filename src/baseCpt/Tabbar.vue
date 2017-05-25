@@ -58,9 +58,9 @@ export default {
   left: 0;
   width: 100%;
   height: 88px;
-  background-color: var(--color--white);
+  background-color: var(--color-bar);
   &::before {
-    background: rgba(0,0,0,.0975);
+    background: var(--border-gray);
     content: '';
     height: 1px;
     left: 0;

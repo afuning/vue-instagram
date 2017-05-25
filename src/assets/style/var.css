@@ -1,6 +1,11 @@
 :root{
+  --color-font: #1A1A1A;
   --color--white: #fff;
+  --color-bar: #FAFAFA;
   --padding-lr: 30px;
 
-  --head-small: 60px;
+  --head-small: 64px;
+
+  --border-gray: #B2B2B2;
+  --icon-gray: #999;
 }
