@@ -6,7 +6,7 @@
           <router-link to="/index"><img src="https://scontent.cdninstagram.com/t51.2885-19/s150x150/17596115_1882149028729672_4150607080039907328_a.jpg"/></router-link>
         </div>
         <div class="thread-header-content">
-          <router-link to="/index">lilyjcollins</router-link><br />
+          <router-link to="/index">{{owner.username}}</router-link><br />
           <router-link to="/index">Cannes Film Festival</router-link>
           <svg class="icon thread-header-content-arrow" aria-hidden="true">
             <use xlink:href="#icon-right"></use>
@@ -20,6 +20,7 @@
       </div>
       <div class="thread-content">
         <div class="thread-content-img">
+          <swiper-list></swiper-list>
         </div>
       </div>
     </div>
@@ -27,12 +28,25 @@
 </template>
 
 <script>
+// import Swiper from '@/baseCpt/Swiper';
+import SwiperList from '@/baseCpt/SwiperList';
 
 export default {
+  props: {
+    thread: Object,
+  },
+  computed: {
+    owner() {
+      return !!this.thread.node ? this.thread.node.owner : {};
+    },
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
+  },
+  components: {
+    SwiperList,
   },
 };
 </script>

@@ -4,6 +4,6 @@ const instance = axios.create({
   baseURL: '',
 });
 
-const ListApi = '/list';
-export const getList = () => instance.get(ListApi);
-export const testPost = () => instance.post(ListApi);
+const ThreadsApi = '/list';
+export const getThreads = () => instance.get(ThreadsApi);
+export const testPost = () => instance.post(ThreadsApi);
