@@ -9,9 +9,7 @@
           <div class="topbar-center_index"></div>
         </div>
         <div class="topbar-right">
-          <svg class="icon topbar-right-icon-msg" aria-hidden="true">
-            <use xlink:href="#icon-icon_send_plane"></use>
-          </svg>
+          <i class="iconfont iconfontIns-icon_send_plane"></i>
         </div>
       </div>
     </div>
@@ -87,9 +85,8 @@ export default {
   }
   &-right {
     flex-basis: 60px;
-    .icon {
-      height: 49px;
-      width: 58px;
+    .iconfont {
+      font-size: 50px;
     }
   }
 }
