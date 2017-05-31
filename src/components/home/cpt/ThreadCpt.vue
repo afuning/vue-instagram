@@ -27,6 +27,9 @@
           <div class="thread-func-icon"><i class="iconfont iconfontIns-shoucang thread-func-icon-msg"></i></div>
         </div>
       </div>
+      <div class="thread-data">
+        <p v-if="!node.is_video"><b>devermut</b>和其他145,795位用户赞了</p>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +43,9 @@ export default {
     thread: Object,
   },
   computed: {
+    node() {
+      return this.thread.node;
+    },
     owner() {
       return !!this.thread.node ? this.thread.node.owner : {};
     },
@@ -102,6 +108,7 @@ export default {
         color: var(--color-font);
         &:first-child {
           font-weight: bold;
+          font-size: 28px;
         }
         &:last-child {
           font-size: 20px;
@@ -117,9 +124,6 @@ export default {
         font-size: 36px;
       }
     }
-  }
-  &-content {
-
   }
   &-func {
     display: flex;
@@ -149,6 +153,13 @@ export default {
           font-size: 46px;
         }
       }
+    }
+  }
+  &-data {
+    font-size: 26px;
+    padding: 0 var(--padding-lr);
+    b {
+      font-weight: bold;
     }
   }
 }
