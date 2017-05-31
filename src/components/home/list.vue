@@ -1,12 +1,13 @@
 <template>
   <div class="thread-list">
     <div class="">
-      <thread-cpt></thread-cpt>
+      <thread-cpt v-for="item in threads" :key="item.node.id" :thread="item"></thread-cpt>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import ThreadCpt from './cpt/ThreadCpt';
 
 export default {
@@ -15,8 +16,11 @@ export default {
       msg: 'Welcome to Your Vue.js App',
     };
   },
+  computed: mapState({
+    threads: state => state.threads.threads,
+  }),
   created() {
-    this.$store.dispatch('getListAction');
+    this.$store.dispatch('getThreads');
   },
   components: {
     ThreadCpt,

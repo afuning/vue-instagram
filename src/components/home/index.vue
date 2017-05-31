@@ -17,6 +17,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
     };
   },
+  mounted() {
+    console.log(1);
+  },
   components: {
     Topbar,
     List,

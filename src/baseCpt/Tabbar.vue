@@ -8,11 +8,7 @@
         <div class="tabbar-item-icon tabbar-item-icon-search" :class="{'active': tabId === 1 }"></div>
       </div>
       <div :data-id="2" @click="changeTab" class="tabbar-item">
-        <!-- <div class="tabbar-item-icon tabbar-item-icon-camera" :class="{'active': oncActive }"></div> -->
-        <!-- <i class="tabbar-item-icon iconfontyyy "></i> -->
-        <svg class="icon tabbar-item-icon tabbar-item-icon-add" aria-hidden="true">
-          <use xlink:href="#icon-addpic"></use>
-        </svg>
+        <i class="tabbar-item-icon tabbar-item-icon-add iconfont iconfontIns-addpic"></i>
       </div>
       <div :data-id="3" @click="changeTab" class="tabbar-item">
         <div class="tabbar-item-icon tabbar-item-icon-like" :class="{'active': tabId === 3 }"></div>
@@ -101,6 +97,9 @@ export default {
         }
       }
       &-add {
+        font-size: 50px;
+        margin-top: 16px;
+        color: #1C1C1C;
         background: none;
       }
       &-like {
